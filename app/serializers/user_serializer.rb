@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :name, :password, :created_at
+  attributes :id, :name, :password, :lists, :created_at
   
   def name
   	object.name
