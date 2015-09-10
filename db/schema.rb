@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150908145644) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "permission", default: 'public'
+    t.string   "permission", default: 'open'
   end
 
   add_index "lists", ["user_id"], name: "index_lists_on_user_id"

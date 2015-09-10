@@ -1,6 +1,11 @@
 class Api::ItemsController < ApiController
   before_action :authenticated?
   
+  def index
+    items = Item.where(list_id: params[:list_id])
+    render json: items
+  end
+
   def create
   	item = Item.new(item_params)
     item.list = List.find(params[:list_id])

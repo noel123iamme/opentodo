@@ -1,5 +1,5 @@
 class ListSerializer < ActiveModel::Serializer
-  attributes :id, :name, :permission, :user, :items
+  attributes :id, :name, :permission #, :user, :items
 
   def name
   	object.name
